@@ -21,7 +21,7 @@ let priceTotal = 0; // celková cena (priceQuality + cena za dopravu)
 // Funkce pro aktualizaci celkové ceny
 function updateTotalPrice() {
   priceSum = price * amount;
-  totalAmount.value = priceSum;
+  totalAmount.value = priceSum.toFixed(2);
 
   // Kvalita
   switch (document.querySelector('input[name="quality"]:checked')?.id) {
@@ -59,7 +59,7 @@ function updateTotalPrice() {
   }
 
   // Aktualizace celkové ceny na stránce
-  totalPrice.value = priceTotal;
+  totalPrice.value = priceTotal.toFixed(2);
 }
 
 // Výběr druhu žrádla
@@ -113,5 +113,5 @@ radioForm.addEventListener("submit", (e) => {
 });
 
 mail.addEventListener("input", (e) => {
-    e.target.value = e.target.value.replace(/[^a-zA-Z0-9]/g, "");
+  e.target.value = e.target.value.replace(/[^a-zA-Z0-9]/g, "");
 });
