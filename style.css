@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 20px;
+}
+
+main {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+select,
+input[type="text"] {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+input[type="submit"] {
+    text-transform: uppercase;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #e2602d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #cc4510;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.radio-wrap,
+.radio-transport {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-wrap label,
+.radio-transport label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    margin: 0;
+    width: 16px;
+    height: 16px;
+}
+
+hr {
+    margin: 10px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+.mail {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mail input {
+    width: 150px;
+    margin-right: 10px;
+}
+
+.amountToSpend input[type="submit"] {
+    width: auto;
+}
