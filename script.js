@@ -57,9 +57,11 @@ function updateTotalPrice() {
       priceTotal = priceQuality;
       break;
   }
-
   // Aktualizace celkové ceny na stránce
-  totalPrice.value = priceTotal.toFixed(2);
+  document.querySelector('input[name="quality"]:checked') ||
+  document.querySelector('input[name="transport"]:checked')
+    ? (totalPrice.value = priceTotal.toFixed(2))
+    : (totalPrice.value = "");
 }
 
 // Výběr druhu žrádla
@@ -106,10 +108,22 @@ radioForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   //Výpis do stránky
-  amountToSpend.value - priceTotal >= 0
-    ? (paragraph.innerText = "Vaše částka pro koupi zboží je dostatečná")
-    : (paragraph.innerText =
-        "S Vaší částkou se do celkové ceny zboží nevejdete");
+
+  console.log(amountToSpend.value);
+
+  if (amountToSpend.value !== "" && totalPrice.value !== "") {
+    if (amountToSpend.value - priceTotal >= 0) {
+      paragraph.classList.add("true");
+      paragraph.classList.remove("false");
+    } else {
+      paragraph.classList.add("false");
+      paragraph.classList.add("true");
+    }
+    amountToSpend.value - priceTotal >= 0
+      ? (paragraph.innerText = "Vaše částka pro koupi zboží je dostatečná")
+      : (paragraph.innerText =
+          "S Vaší částkou se do celkové ceny zboží nevejdete");
+  }
 });
 
 mail.addEventListener("input", (e) => {

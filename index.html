@@ -12,7 +12,7 @@
       <div class="basic">
         <form id="orderForm">
           <select name="krmiva" id="krmiva">
-            <option value="vyber">Vyberte žrádlo</option>
+            <option value="vyber" selected disabled>Vyberte žrádlo</option>
             <option value="dog">Psí žrádlo 150 Kč/kg</option>
             <option value="cat">Kočičí žrádlo 120 Kč/kg</option>
             <option value="fish">Žrádlo pro rybičky 50 Kč/kg</option>
@@ -22,7 +22,7 @@
           ><input type="number" name="kilogram" id="kilogram" />
           <!-- <input type="submit" id="odeslat" name="odeslat" /> -->
           <label for="price">Aktuální cena krmiva je (Kč)</label
-          ><input type="text" name="price" id="price" />
+          ><input type="text" name="price" id="price" readonly />
         </form>
       </div>
       <hr />
@@ -57,11 +57,11 @@
         <hr />
         <div class="sum">
           <label for="sum">Výsledná cena (Kč)</label>
-          <input type="text" name="sum" id="sum" />
+          <input type="text" name="sum" id="sum" readonly />
         </div>
         <hr />
         <div class="amountToSpend">
-          <label for="amountToSpend">Vaše částka k utracení (Kč)</label>
+          <label for="amountToSpend">Kolik peněz chcete utratit (Kč)</label>
           <input type="number" name="amountToSpend" id="amountToSpend" />
           <input type="submit" />
         </div>

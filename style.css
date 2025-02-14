@@ -1,107 +1,141 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.true {
+  padding: 8px ;
+  border-radius: 4px;
+  color: rgb(1, 92, 1);
+  border: 1px solid rgb(20, 177, 20, 0.3);
+}
+
+.false {
+  padding: 8px ;
+  border-radius: 4px;
+  color: rgb(185, 0, 0);
+  border: 1px solid rgba(177, 20, 20, 0.3);
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
 }
 
 main {
-    width: 100%;
-    max-width: 600px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    text-align: center;
-    padding-bottom: 10px;
+  text-align: center;
+  padding-bottom: 10px;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sum {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.amountToSpend {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 select,
-input[type="text"], input[type="number"] {
-    padding: 8px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%;
+input[type="text"],
+input[type="number"] {
+  margin-top: 5px;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
 }
 
 input[type="submit"] {
-    text-transform: uppercase;
-    padding: 10px;
-    font-size: 1rem;
-    background-color: #e2602d;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #e2602d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  max-width: 100px;
 }
 
 input[type="submit"]:hover {
-    background-color: #cc4510;
+  background-color: #cc4510;
+  box-shadow: 0 4px 4px #f9cebd;
 }
 
 label {
-    font-size: 1rem;
-    font-weight: bold;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .radio-wrap,
 .radio-transport {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.radio-wrap {
+  margin-top: 10px;
 }
 
 .radio-wrap label,
 .radio-transport label {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
 }
 
 input[type="radio"] {
-    margin: 0;
-    width: 16px;
-    height: 16px;
+  margin: 0;
+  width: 16px;
+  height: 16px;
 }
 
 hr {
-    margin: 10px 0;
-    border: 0;
-    border-top: 1px solid #ccc;
+  margin: 10px 0;
+  border: 0;
+  border-top: 1px solid #ccc;
 }
 
 .mail {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .mail input {
-    width: 150px;
-    margin-right: 10px;
+  width: 150px;
 }
 
 .amountToSpend input[type="submit"] {
-    width: auto;
+  width: auto;
+}
+
+input[name="price"] {
+  margin-bottom: 10px;
 }
