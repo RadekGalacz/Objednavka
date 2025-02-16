@@ -5,7 +5,7 @@ const totalPrice = document.querySelector("#sum");
 const radioForm = document.querySelector("#radioForm");
 const mail = document.querySelector("#mail");
 const amountToSpend = document.querySelector("#amountToSpend");
-const radioButtonsWrap = document.querySelectorAll('input[name="quality"]');
+const checkboxWrap = document.querySelectorAll('input[name="quality"]');
 const radioButtonsTransport = document.querySelectorAll(
   'input[name="transport"]'
 );
@@ -94,13 +94,25 @@ kilogram.addEventListener("input", (e) => {
 });
 
 // Výběr kvality zboží
-radioButtonsWrap.forEach((radio) => {
-  radio.addEventListener("change", updateTotalPrice); // Aktualizace ceny při změně kvality
+checkboxWrap.forEach((item) => {
+  item.addEventListener("change", () => {
+    if (totalAmount.value !== "") {
+      updateTotalPrice();
+    }
+    checkboxWrap.forEach((one) => {
+      item.checked === false ? (one.disabled = false) : (one.disabled = true);
+    });
+    item.disabled = false;
+  });
 });
 
 // Výběr dopravy
 radioButtonsTransport.forEach((radio) => {
-  radio.addEventListener("change", updateTotalPrice); // Aktualizace ceny při změně dopravy
+  radio.addEventListener("change", () => {
+    if (totalAmount.value !== "") {
+      updateTotalPrice(); // Aktualizace ceny při změně dopravy
+    } 
+  });
 });
 
 //Částka k utracení
@@ -108,7 +120,6 @@ radioForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   //Výpis do stránky
-
   console.log(amountToSpend.value);
 
   if (amountToSpend.value !== "" && totalPrice.value !== "") {
